@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+clickhouse_data/
+.DS_Store

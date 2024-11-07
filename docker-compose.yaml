@@ -1,0 +1,11 @@
+version: '3'
+services:
+  clickhouse:
+    image: yandex/clickhouse-server:latest
+    container_name: clickhouse_server
+    ports:
+      - "8123:8123"  # HTTP порт ClickHouse
+      - "9000:9000"  # порт для взаимодействия с клиентами
+    volumes:
+      - ./clickhouse_data:/var/lib/clickhouse  # Для сохранения данных
+    restart: always
